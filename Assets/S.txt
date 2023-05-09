@@ -1,0 +1,37 @@
+Oyun Adı: ProjectS
+
+Oyun Türü: Aksiyon, Macera
+
+Hikaye:
+
+ProjectS, bilinmeyen bir sebepten dolayı buraya düşmüş bir karakterin kaçış hikayesini anlatır. Karakterimiz, bulunduğu ortamdan evine dönmeye çalışır. Ancak karşısına çıkan düşmanlarla mücadele etmek zorundadır.
+
+Karakterimiz, dönüş yolunda seçimler yapmak zorundadır. Bu seçimler, karakterin özelliklerinin iyi ya da kötü yönde gelişmesine neden olacaktır. Karakterimizin özellikleri, savaş yeteneklerini değiştirerek düşmanlarla mücadelesinde farklı stratejiler kullanmasına olanak tanıyacaktır.
+
+Oyun Mekanikleri:
+
+Karakter hareketi: Karakterimiz, tıklanan yere ilerler.
+
+Düşmanlar: İlerledikçe çeşitli düşmanlarla karşılaşacağız. Düşmanlar, farklı savaş yeteneklerine sahip olacaklar.
+
+Savaş: Karakterimiz, düşmanlarla savaşırken özelliklerine göre farklı savaş yeteneklerini kullanabilecektir. Savaşlar, gerçek zamanlı ve aksiyon dolu olacak.
+
+Özellikler: Karakterimizin 7 farklı özelliği olacak. Bu özellikler, karakterin savaş yeteneklerini belirleyecek. Özellikler, hikaye içerisinde yapılan seçimlere göre artıp azalacak.
+
+Yetenekler: Karakterimiz, özelliklerinden biri maximum veya minimum seviyeye ulaştığında kullandığı yetenek gelişecek. Bu yetenekler, savaşlarda farklı avantajlar sağlayacak.
+
+Kurtuluş: Karakterimiz, sona ulaştığında geliştirdiği yeteneğe göre farklı zorluklarla karşılaşacak. 
+
+Hikaye: Oyun içerisinde karakterimiz, hikayenin ilerlemesini kontrol edecek. Yapılan seçimler, hikayenin sonunu etkileyecektir.
+
+Oyun İçi Ekranlar:
+
+Giriş Ekranı: Oyunun temel girişi ve amacının anlatıldığı ekran.
+
+Ana Oyun Ekranı: Karakterin yürüyebileceği, gezebileceği ana oyun alanı.
+
+Savaş Ekranı: Düşmanlarla savaşacağı savaş ekranı.
+
+Oyun Sonu Ekranı: Hikayenin sonunun anlatıldığı ekran.
+
+Oyun Sonu Savaş Ekranı: Hikayenin sonunda karakterimizin geliştirdiği özelliklere göre final boss savaş ekranı.
