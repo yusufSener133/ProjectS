@@ -8,19 +8,26 @@ namespace FirstScene
     public class UIManager : MonoBehaviour
     {
         [Header("Assignments")]
+        [SerializeField] List<string> _startStory;
         [SerializeField] List<string> _story;
+        [SerializeField] List<Sprite> _textures;
         [SerializeField] TMP_Text _storyLineText;
+        [SerializeField] TMP_Text _startStoryLineText;
+        [SerializeField] Image _startImage;
         [SerializeField] Button _nextButton;
 
         [Header("Variables")]
-        [SerializeField] bool _nextLine = false;
-        [SerializeField,Range(0,1)] float _textSpeed = 0.1f;
+        [SerializeField, Range(0, 1)] float _textSpeed = 0.1f;
         int _storyCount = 0;
         private void Start()
         {
-            StartCoroutine(TextAnim(_story[_storyCount]));
+            StartStory();
         }
-
+        void StartStory()
+        {
+            int i = 0;
+            StartCoroutine(TextAnim(_startStory[i]));
+        }
         public void NextButton()
         {
             _storyCount++;

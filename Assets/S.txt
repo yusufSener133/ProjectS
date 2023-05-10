@@ -35,3 +35,19 @@ Savaş Ekranı: Düşmanlarla savaşacağı savaş ekranı.
 Oyun Sonu Ekranı: Hikayenin sonunun anlatıldığı ekran.
 
 Oyun Sonu Savaş Ekranı: Hikayenin sonunda karakterimizin geliştirdiği özelliklere göre final boss savaş ekranı.
+
+
+----
+Giriş Hikayesi
+
+Uzun zaman önce, dünya henüz insanların hüküm sürdüğü yarı keşfedilmiş bir yerdi. Bu zamanlarda, yedi ölümcül günah olarak bilinen şeyler henüz tam olarak anlaşılamamıştı. İnsanlar, bu günahlara düşmelerinin ne tür sonuçları olabileceğini bilmiyorlardı.
+
+Ancak bir gün, bir şehirde garip bir olay meydana geldi. Tamamen farklı nedenlerden dolayı insanlar ölüyordu. Bir kişi açgözlülüğüne kapılmış, diğeri öfkesine yenik düşmüş, bir diğeri de kibriyle savaşamamıştı. Bu olayların ardından, insanlar yedi ölümcül günahın ne kadar tehlikeli olabileceğini anladılar.
+
+Bir grup insan, bu ölümlerin ardından bir araya geldi ve yedi ölümcül günahın neden bu kadar tehlikeli olduğunu öğrenmek için bir araştırma yapmaya karar verdi. İnsanlar, bu günahların insanların karakterlerini nasıl etkilediğini, onları nasıl kötüye yönlendirdiğini ve başkalarına ne kadar zarar verebileceğini anlamak istediler.
+
+Bu insanlar, yedi ölümcül günahların güçlerini keşfetti ve onları kontrol etmek istedi. Fakat zamanla bu insanlar arasında anlaşmazlıklar başladı ve sonunda birbirlerine karşı savaşmaya başladılar. Kimi açgözlülük yaparken, kimi de öfkesine yenik düştü. 
+
+İnsanlar...
+Bir zamanlar arkadaşlarımdı.
+Bir tek ben kaldım.
