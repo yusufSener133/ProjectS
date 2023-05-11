@@ -10,7 +10,6 @@ namespace FirstScene
         [Header("Assignments")]
         [SerializeField] List<string> _story;
         [SerializeField] TMP_Text _storyLineText;
-        [SerializeField] TMP_Text _startStoryLineText;
         [SerializeField] Image _startImage;
         [SerializeField] Button _nextButton;
 
