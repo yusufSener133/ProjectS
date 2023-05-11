@@ -349,7 +349,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -794.742, w: 0}
+  m_margin: {x: 0, y: 41.557693, z: -794.742, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -617,30 +617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed3bce4092f1499bbeb38614aa4578f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startStory:
-  - "Uzun zaman \xF6nce, d\xFCnya hen\xFCz insanlar\u0131n h\xFCk\xFCm s\xFCrd\xFC\u011F\xFC
-    yar\u0131 ke\u015Ffedilmi\u015F bir yerdi. Bu zamanlarda, yedi \xF6l\xFCmc\xFCl
-    g\xFCnah olarak bilinen \u015Feyler hen\xFCz tam olarak anla\u015F\u0131lamam\u0131\u015Ft\u0131.
-    \u0130nsanlar, bu g\xFCnahlara d\xFC\u015Fmelerinin ne t\xFCr sonu\xE7lar\u0131
-    olabilece\u011Fini bilmiyorlard\u0131."
-  - "Ancak bir g\xFCn, bir \u015Fehirde garip bir olay meydana geldi. Tamamen farkl\u0131
-    nedenlerden dolay\u0131 insanlar \xF6l\xFCyordu. Bir ki\u015Fi a\xE7g\xF6zl\xFCl\xFC\u011F\xFCne
-    kap\u0131lm\u0131\u015F, di\u011Feri \xF6fkesine yenik d\xFC\u015Fm\xFC\u015F,
-    bir di\u011Feri de kibriyle sava\u015Famam\u0131\u015Ft\u0131. Bu olaylar\u0131n
-    ard\u0131ndan, insanlar yedi \xF6l\xFCmc\xFCl g\xFCnah\u0131n ne kadar tehlikeli
-    olabilece\u011Fini anlad\u0131lar."
-  - "Bir grup insan, bu \xF6l\xFCmlerin ard\u0131ndan bir araya geldi ve yedi \xF6l\xFCmc\xFCl
-    g\xFCnah\u0131n neden bu kadar tehlikeli oldu\u011Funu \xF6\u011Frenmek i\xE7in
-    bir ara\u015Ft\u0131rma yapmaya karar verdi. \u0130nsanlar, bu g\xFCnahlar\u0131n
-    insanlar\u0131n karakterlerini nas\u0131l etkiledi\u011Fini, onlar\u0131 nas\u0131l
-    k\xF6t\xFCye y\xF6nlendirdi\u011Fini ve ba\u015Fkalar\u0131na ne kadar zarar
-    verebilece\u011Fini anlamak istediler."
-  - "Bu insanlar, yedi \xF6l\xFCmc\xFCl g\xFCnahlar\u0131n g\xFC\xE7lerini ke\u015Ffetti
-    ve onlar\u0131 kontrol etmek istedi. Fakat zamanla bu insanlar aras\u0131nda
-    anla\u015Fmazl\u0131klar ba\u015Flad\u0131 ve sonunda birbirlerine kar\u015F\u0131
-    sava\u015Fmaya ba\u015Flad\u0131lar. Kimi a\xE7g\xF6zl\xFCl\xFCk yaparken, kimi
-    de \xF6fkesine yenik d\xFC\u015Ft\xFC."
-  - "\u0130nsanlar... Bir zamanlar arkada\u015Flar\u0131md\u0131. Bir tek ben kald\u0131m. "
   _story:
   - "Oldu\u011Fun yerde kal !!!"
   - Kimsin sen ?
@@ -652,16 +628,11 @@ MonoBehaviour:
   - n
   - n
   - n
-  _textures:
-  - {fileID: 21300000, guid: 5d6def69f1cfd184093fa1958159aba2, type: 3}
-  - {fileID: 21300000, guid: 9192d7b012cea0441b32ed729e23e503, type: 3}
-  - {fileID: 21300000, guid: 95f19f073efc52a46bb5333ad8467913, type: 3}
-  - {fileID: 21300000, guid: 1078d1d38226b7f4997ed0293a045934, type: 3}
   _storyLineText: {fileID: 1588716209}
   _startStoryLineText: {fileID: 471218797}
   _startImage: {fileID: 1315266460}
   _nextButton: {fileID: 191001006}
-  _textSpeed: 0.02
+  _textSpeed: 0.01
 --- !u!1 &983949309
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +780,7 @@ GameObject:
   - component: {fileID: 1315266461}
   - component: {fileID: 1315266460}
   - component: {fileID: 1315266462}
+  - component: {fileID: 1315266463}
   m_Layer: 5
   m_Name: StartImage
   m_TagString: Untagged
@@ -894,6 +866,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1315266463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315266458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2cd155250544df8833e8caf7871ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startStory:
+  - "Uzun zaman \xF6nce, d\xFCnya hen\xFCz insanlar\u0131n h\xFCk\xFCm s\xFCrd\xFC\u011F\xFC
+    yar\u0131 ke\u015Ffedilmi\u015F bir yerdi. Bu zamanlarda, yedi \xF6l\xFCmc\xFCl
+    g\xFCnah olarak bilinen \u015Feyler hen\xFCz tam olarak anla\u015F\u0131lamam\u0131\u015Ft\u0131.
+    \u0130nsanlar, bu g\xFCnahlara d\xFC\u015Fmelerinin ne t\xFCr sonu\xE7lar\u0131
+    olabilece\u011Fini bilmiyorlard\u0131."
+  - "Ancak bir g\xFCn, bir \u015Fehirde garip bir olay meydana geldi. Tamamen farkl\u0131
+    nedenlerden dolay\u0131 insanlar \xF6l\xFCyordu. Bir ki\u015Fi a\xE7g\xF6zl\xFCl\xFC\u011F\xFCne
+    kap\u0131lm\u0131\u015F, di\u011Feri \xF6fkesine yenik d\xFC\u015Fm\xFC\u015F,
+    bir di\u011Feri de kibriyle sava\u015Famam\u0131\u015Ft\u0131. Bu olaylar\u0131n
+    ard\u0131ndan, insanlar yedi \xF6l\xFCmc\xFCl g\xFCnah\u0131n ne kadar tehlikeli
+    olabilece\u011Fini anlad\u0131lar."
+  - "Bir grup insan, bu \xF6l\xFCmlerin ard\u0131ndan bir araya geldi ve yedi \xF6l\xFCmc\xFCl
+    g\xFCnah\u0131n neden bu kadar tehlikeli oldu\u011Funu \xF6\u011Frenmek i\xE7in
+    bir ara\u015Ft\u0131rma yapmaya karar verdi. \u0130nsanlar, bu g\xFCnahlar\u0131n
+    insanlar\u0131n karakterlerini nas\u0131l etkiledi\u011Fini, onlar\u0131 nas\u0131l
+    k\xF6t\xFCye y\xF6nlendirdi\u011Fini ve ba\u015Fkalar\u0131na ne kadar zarar
+    verebilece\u011Fini anlamak istediler."
+  - "Bu insanlar, yedi \xF6l\xFCmc\xFCl g\xFCnahlar\u0131n g\xFC\xE7lerini ke\u015Ffetti
+    ve onlar\u0131 kontrol etmek istedi. Fakat zamanla bu insanlar aras\u0131nda
+    anla\u015Fmazl\u0131klar ba\u015Flad\u0131 ve sonunda birbirlerine kar\u015F\u0131
+    sava\u015Fmaya ba\u015Flad\u0131lar. Kimi a\xE7g\xF6zl\xFCl\xFCk yaparken, kimi
+    de \xF6fkesine yenik d\xFC\u015Ft\xFC. "
+  - "\u0130nsanlar... "
+  - "Bir zamanlar arkada\u015Flar\u0131md\u0131. "
+  - "Bir tek ben kald\u0131m. "
+  _startStoryLineText: {fileID: 471218797}
+  _textSpeed: 0.01
 --- !u!1 &1588716207
 GameObject:
   m_ObjectHideFlags: 0

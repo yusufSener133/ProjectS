@@ -8,9 +8,7 @@ namespace FirstScene
     public class UIManager : MonoBehaviour
     {
         [Header("Assignments")]
-        [SerializeField] List<string> _startStory;
         [SerializeField] List<string> _story;
-        [SerializeField] List<Sprite> _textures;
         [SerializeField] TMP_Text _storyLineText;
         [SerializeField] TMP_Text _startStoryLineText;
         [SerializeField] Image _startImage;
@@ -21,26 +19,21 @@ namespace FirstScene
         int _storyCount = 0;
         private void Start()
         {
-            StartStory();
-        }
-        void StartStory()
-        {
-            int i = 0;
-            StartCoroutine(TextAnim(_startStory[i]));
+            
         }
         public void NextButton()
         {
             _storyCount++;
-            StartCoroutine(TextAnim(_story[_storyCount]));
+            StartCoroutine(TextAnim(_story[_storyCount], _storyLineText));
         }
 
-        IEnumerator TextAnim(string line)
+        IEnumerator TextAnim(string line, TMP_Text _text)
         {
             _nextButton.interactable = false;
-            _storyLineText.text = "";
+            _text.text = "";
             foreach (var item in line)
             {
-                _storyLineText.text += item.ToString();
+                _text.text += item.ToString();
                 yield return new WaitForSeconds(_textSpeed);
             }
             _nextButton.interactable = true;
