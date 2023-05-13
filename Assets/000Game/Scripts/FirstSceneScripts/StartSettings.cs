@@ -18,6 +18,11 @@ public class StartSettings : MonoBehaviour
     public void Next()
     {
         _startStoryCount++;
+        if (_startStoryCount >= _startStory.Count)
+        {
+            GameManager.Instance.NextScene();
+            return;
+        }
         StartCoroutine(TextAnim(_startStory[_startStoryCount], _startStoryLineText));
     }
     IEnumerator TextAnim(string line, TMP_Text _text)
