@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlayerController : Player
 {
     Vector2 _mousePos;
-
     bool isClicked = false;
+
     void Update()
     {
         Touching();
@@ -31,7 +28,6 @@ public class PlayerController : Player
                 GameManager.Instance.UIManager.Master();
         }
     }
-
     public void EditValue(int value, PowerEnum who)
     {
         switch (who)
