@@ -32,7 +32,7 @@ public class PlayerMovement : Player
             Destroy(collision.gameObject);
             Greed++;
         }
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyMission"))
         {
             _animator.Play("PlayerHitAnim");
             Sloth++;

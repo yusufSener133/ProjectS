@@ -11,6 +11,7 @@ public class MainGameController : MonoBehaviour
     [SerializeField] List<GameObject> _missions = new List<GameObject>();
     [Header("Assignment/UI")]
     [SerializeField] GameObject _missionCompletePanel;
+    [SerializeField] GameObject _endPanel;
     [SerializeField] TMP_Text _missionCompleteText;
     [SerializeField] TMP_Text _levelText;
     [Header("Variables")]
@@ -28,8 +29,9 @@ public class MainGameController : MonoBehaviour
             }
             if (_playerMovement.Sloth != 0)
             {
-                StartCoroutine(MissionControl("Güzel ikinci görevde tamam. "));
+                StartCoroutine(MissionControl("Güzel ikinci görevde tamam.          "));
                 _playerMovement.Sloth = 0;
+                EndGame();
             }
             _playerMovement.win = false;
         }
@@ -58,5 +60,13 @@ public class MainGameController : MonoBehaviour
         _missions[x].SetActive(false);
         _missions[y].SetActive(true);
         _levelText.text = "Görev " + (y + 1);
+    }
+
+    public void EndGame() => StartCoroutine(EndGameWait());
+    public IEnumerator EndGameWait()
+    {
+        _endPanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        Time.timeScale = 0;
     }
 }/**/

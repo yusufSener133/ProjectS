@@ -9,6 +9,7 @@ TagManager:
   - Saloon
   - Coin
   - Win
+  - EnemyMission
   layers:
   - Default
   - TransparentFX
