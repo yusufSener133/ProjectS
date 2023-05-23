@@ -10,24 +10,24 @@ public class StoryController : MonoBehaviour
     [SerializeField] TMP_Text _storyLineText;
 
     [Header("Variables")]
-    [SerializeField] List<string> _story;
-    [SerializeField, Range(0, 1)] float _textSpeed = 0.1f;
+    [SerializeField] List<string> _storyLines;
+    [SerializeField, Range(0, 1)] float _textSpeed = 0.01f;
     int _storyCount = 0;
 
     private void Start()
     {
-        StartCoroutine(TextAnim(_story[_storyCount], _storyLineText));
+        StartCoroutine(TextAnim(_storyLines[_storyCount], _storyLineText));
     }
     public void Next()
     {
         _storyCount++;
-        if (_storyCount >= _story.Count)
+        if (_storyCount >= _storyLines.Count)
         {
             /**/
             return;
         }
         _storyLineText.text = "";
-        StartCoroutine(TextAnim(_story[_storyCount], _storyLineText));
+        StartCoroutine(TextAnim(_storyLines[_storyCount], _storyLineText));
     }
     IEnumerator TextAnim(string line, TMP_Text _text)
     {
