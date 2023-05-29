@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField] PlayerController _player;
-    [SerializeField] UIManager _UIManager;
+    [SerializeField] StartUIManager _UIManager;
     public PlayerController Player { get => _player; }
-    public UIManager UIManager { get => _UIManager; }
+    public StartUIManager UIManager { get => _UIManager; }
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

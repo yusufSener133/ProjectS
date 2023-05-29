@@ -34,4 +34,5 @@ public class StartSettings : MonoBehaviour
             yield return new WaitForSeconds(_textSpeed);
         }
     }
-}
+}/**/
+

@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+
+public class StartUIManager : MonoBehaviour
 {
     [Header("Assignments")]
     [SerializeField] GameObject _tavern;
@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<string> _enemyText = new List<string>();
     public void Master()
     {
-        PanelControl(_tavern,_masterPanel);
+        PanelControl(_tavern, _masterPanel);
     }
     public void EnterTavern(GameObject go)
     {
@@ -48,4 +48,5 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
     }
     public void QuitGame() => Application.Quit();
-}
+}/**/
+
