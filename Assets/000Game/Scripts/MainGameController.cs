@@ -7,66 +7,84 @@ using TMPro;
 public class MainGameController : MonoBehaviour
 {
     [Header("Assignment")]
-    [SerializeField] PlayerMovement _playerMovement;
+    [SerializeField] ColliderCheck _player;
     [SerializeField] List<GameObject> _missions = new List<GameObject>();
+    [SerializeField] Transform _startPos;
     [Header("Assignment/UI")]
-    [SerializeField] GameObject _missionCompletePanel;
+    [SerializeField] GameObject _healthCanvas;
+    [SerializeField] GameObject _talkPanel;
     [SerializeField] GameObject _endPanel;
-    [SerializeField] TMP_Text _missionCompleteText;
+    [SerializeField] Animator _falling;
+    [SerializeField] Button _storyLineButton;
+    [SerializeField] TMP_Text _storyLineText;
     [SerializeField] TMP_Text _levelText;
     [Header("Variables")]
+    [SerializeField] List<string> _storyLines;
     [SerializeField, Range(0, 1)] float _textSpeed = 0.1f;
-    bool _textEnd = false;
+    int _missionCount = 0;
 
+    private void Start()
+    {
+        TextUpdate();
+        _falling.Play("Start");
+    }
     private void Update()
     {
-        if (_playerMovement.win)
+        if (_player.Win)
         {
-            if (_playerMovement.Greed != 0)
-            {
-                StartCoroutine(MissionControl("Güzel ilk görevi tamamladýn. Yeni görev o zaman          "));
-                _playerMovement.Greed = 0;
-            }
-            if (_playerMovement.Sloth != 0)
-            {
-                StartCoroutine(MissionControl("Güzel ikinci görevde tamam.          "));
-                _playerMovement.Sloth = 0;
-                EndGame();
-            }
-            _playerMovement.win = false;
+            EndMission();
+            _player.gameObject.SetActive(false);
+            _player.transform.position = _startPos.position;
+            _player.Win = false;
         }
     }
-    IEnumerator TextAnim(string line)
+    private void TextUpdate()
     {
-        _textEnd = false;
-        _missionCompleteText.text = "";
+        _talkPanel.SetActive(true);
+        StartCoroutine(TextAnim(_storyLines[_missionCount]));
+    }
+    private IEnumerator TextAnim(string line)
+    {
+        _storyLineButton.interactable = false;
+        _storyLineText.text = "";
         foreach (var item in line)
         {
-            _missionCompleteText.text += item.ToString();
+            _storyLineText.text += item.ToString();
             yield return new WaitForSeconds(_textSpeed);
         }
-        _textEnd = true;
+        _storyLineButton.interactable = true;
     }
-    IEnumerator MissionControl(string line)
+    public void NextMissionButton()
     {
-        _missionCompletePanel.SetActive(true);
-        StartCoroutine(TextAnim(line));
-        yield return new WaitUntil(() => _textEnd);
-        _missionCompletePanel.SetActive(false);
-        NextMission(0, 1);
+        if (_storyLines.Count == _missionCount + 1)
+        {
+            EndGame();
+            return;
+        }
+        _player.gameObject.SetActive(true);
+        _talkPanel.SetActive(false);
+        NextMission(_missionCount);
     }
-    void NextMission(int x, int y)
+    private void EndMission()
+    {
+        _talkPanel.SetActive(true);
+        StartCoroutine(TextAnim(_storyLines[_missionCount]));
+    }
+    private void NextMission(int x)
     {
         _missions[x].SetActive(false);
-        _missions[y].SetActive(true);
-        _levelText.text = "Görev " + (y + 1);
+        _missions[x + 1].SetActive(true);
+        if (x + 1 > 4)
+        {
+            _healthCanvas.transform.SetParent(_missions[x + 1].transform);
+        }
+        _levelText.text = "Görev " + (x + 1);
+        _missionCount++;
     }
 
-    public void EndGame() => StartCoroutine(EndGameWait());
-    public IEnumerator EndGameWait()
+    private void EndGame()
     {
         _endPanel.SetActive(true);
-        yield return new WaitForSeconds(2f);
         Time.timeScale = 0;
     }
 }/**/

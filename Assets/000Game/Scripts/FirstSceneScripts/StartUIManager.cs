@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -11,9 +12,11 @@ public class StartUIManager : MonoBehaviour
     [SerializeField] GameObject _talkPanel;
     [SerializeField] GameObject _masterPanel;
     [SerializeField] GameObject _endPanel;
+    [SerializeField] Animator _falling;
 
     [Header("TalkLines")]
     [SerializeField] List<string> _enemyText = new List<string>();
+
     public void Master()
     {
         PanelControl(_tavern, _masterPanel);
@@ -38,6 +41,13 @@ public class StartUIManager : MonoBehaviour
 
     public void AcceptButton()
     {
+        StartCoroutine(AcceptButtonWait());
+    }
+    public IEnumerator AcceptButtonWait()
+    {
+        _falling.gameObject.SetActive(true);
+        _falling.Play("End");
+        yield return new WaitForSeconds(2f);
         GameManager.Instance.NextScene();
     }
     public void RejectButton() => StartCoroutine(RejectButtonWait());

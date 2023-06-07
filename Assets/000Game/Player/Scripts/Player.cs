@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private float _health;
+    public float Health
+    {
+        get { return _health; }
+        set { _health = value <= 0 ? 0 : value; }
+    }
+
+
     private List<string> _maxPowers = new List<string>();
     private int _pride = 0;
     private int _greed = 0;
@@ -21,7 +29,7 @@ public class Player : MonoBehaviour
         get { return _pride; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _pride = value;
             ValueCheck(_pride, "Pride");
         }
@@ -34,7 +42,7 @@ public class Player : MonoBehaviour
         get { return _greed; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _greed = value;
             ValueCheck(_greed, "Greed");
         }
@@ -47,7 +55,7 @@ public class Player : MonoBehaviour
         get { return _lust; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _lust = value;
             ValueCheck(_lust, "Lust");
         }
@@ -60,7 +68,7 @@ public class Player : MonoBehaviour
         get { return _envy; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _envy = value;
             ValueCheck(_envy, "Envy");
         }
@@ -73,7 +81,7 @@ public class Player : MonoBehaviour
         get { return _gluttony; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _gluttony = value;
             ValueCheck(_gluttony, "Gluttony");
         }
@@ -86,7 +94,7 @@ public class Player : MonoBehaviour
         get { return _wrath; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _wrath = value;
             ValueCheck(_wrath, "Wrath");
         }
@@ -99,7 +107,7 @@ public class Player : MonoBehaviour
         get { return _sloth; }
         set
         {
-            if (value < -10 || value > 10)  return;
+            if (value < -10 || value > 10) return;
             _sloth = value;
             ValueCheck(_sloth, "Sloth");
         }
